@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <!-- font awesome 5 link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+          <nav class="navbar navbar-expand-md">          
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span> <i class="fas fa-bars navbar-icon"></i> </span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+                <img src="data:image/jpeg;base64,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" alt="logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link text-center text-md-left" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center text-md-left" href="#About-Me">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center text-md-left" href="#Tutorial">Tutorials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center text-md-left" href="#feedback">Feedback</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center text-md-left" href="#contact">Contact</a>
+                </li>               
+              </ul>
+            </div>
+          </nav>
+
+          <section id="banner">
+              <div class="banner-container d-flex justify-content-center align-items-center">
+                  <div class="banner-contents text-center">
+                      <h1 class="font-weight-bolder text-white mb-5">Learn Something New !!!</h1>
+                      <button class="btn btn-lg btn-primary mr-3" onclick="location.href='#tutorial'" > <i class="fas fa-play mr-2"></i> Tutorials</button>
+                      <button class="btn btn-lg btn-primary mr-3" onclick="window.open('https://www.youtube.com/watch?v=M55ByQbmTZg&list=PLgH5QX0i9K3oC_wmWEZa2xWxJauIRQ9kG&index=32')" class="request-callback"><i class="fab fa-youtube mr-2"></i>  Subscribe</button>
+
+                  </div>
+              </div>
+          </section>
+        </header>
+
+ 
+ <main>
+  <section id="fetures" class="text-center">
+
+    <div class="row">
+        <div class="col-lg-4 d-block d-lg-flex">
+           <div class="feture-col">
+            <i class="fas fa-hand-holding-usd fa-3x icon-style rounded-circle"></i>
+            <h4 class="font-weight-bolder">free to use</h4>
+            <p class="font-weight-smaller">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas cum voluptates at dicta exercitationem voluptas earum maxime dolores distinctio esse!</p>
+           </div>
+        </div>
+        <div class="col-lg-4 d-block d-lg-flex">
+            <div class="feture-col">
+             <i class="fas fa-hand-holding-usd fa-3x icon-style rounded-circle"></i>
+             <h4 class="font-weight-bolder">free to use</h4>
+             <p class="font-weight-smaller">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas cum voluptates at dicta exercitationem voluptas earum maxime dolores distinctio esse!</p>
+            </div>
+         </div>
+         <div class="col-lg-4 d-block d-lg-flex">
+            <div class="feture-col">
+             <i class="fas fa-hand-holding-usd fa-3x icon-style rounded-circle"></i>
+             <h4 class="font-weight-bolder">free to use</h4>
+             <p class="font-weight-smaller">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas cum voluptates at dicta exercitationem voluptas earum maxime dolores distinctio esse!</p>
+            </div>
+         </div>
+    </div>
+  </section>
+
+  <section id="About-Me">
+    <div class="section-title">
+        <h3 class="text-center">About Me</h3>
+        <hr class="hr-style" style="border-color:black ;">
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="basic-desc">
+                    <i class="far fa-user fa-2x icon-style rounded-circle"></i>
+                    <h4 class="font-weight-bolder">Personal Info</h4>
+                    <p>Name: Farhan Labib</p>
+                    <p>profession: software engineer</p>
+                    <p>current address: dhanmondi Dhaka</p>
+                    <p>website :<a href="https://www.Farhanofficial.com" target="_blank">www.Farhanofficial.com</a></p>
+                    <p> <a href="https://www.dropbox.com/s/hcrb4xwuvwpicf7/PERSONAL%20INFORMATIONAnisul%20Islam.pdf?dl=0" target="_blank" download=""><button class="btn btn-primary">Download CV</button></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+
+            </div>
+            <div class=" col-lg-5">
+                <div class="basic-desc">
+                    <i class="icon-style rounded-circle fas fa-trophy fa-2x"></i>
+                    <h4 class="font-weight-bolder">Education</h4>
+                    <p>Name: Farhan Labib</p>
+                    <p>profession: software engineer</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus in quia pariatur laudantium et itaque suscipit, obcaecati nostrum unde perspiciatis?</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex saepe maxime tempora, neque officia quibusdam ipsa esse nisi laborum ad.
+                    
+                    <p>website :<a href="https://www.Farhanofficial.com" target="_blank">www.Farhanofficial.com</a></p>
+                    <p> <a href="https://www.dropbox.com/s/hcrb4xwuvwpicf7/PERSONAL%20INFORMATIONAnisul%20Islam.pdf?dl=0" target="_blank" download=""><button class="btn btn-primary">Download CV</button></a></p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row">
+            
+            <div class=" col-lg-5">
+                <div class="basic-desc">
+                    <i class="icon-style rounded-circle fas fa-trophy fa-2x"></i>
+                    <h4 class="font-weight-bolder">Acivement</h4>
+                    <p>Name: Farhan Labib</p>
+                    <p>profession: software engineer</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus in quia pariatur laudantium et itaque suscipit, obcaecati nostrum unde perspiciatis?</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex saepe maxime tempora, neque officia quibusdam ipsa esse nisi laborum ad.
+                    
+                    <p>website :<a href="https://www.Farhanofficial.com" target="_blank">www.Farhanofficial.com</a></p>
+                    <p> <a href="https://www.dropbox.com/s/hcrb4xwuvwpicf7/PERSONAL%20INFORMATIONAnisul%20Islam.pdf?dl=0" target="_blank" download=""><button class="btn btn-primary">Download CV</button></a></p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+
+            </div>
+            <div class=" col-lg-5">
+                <div class="basic-desc">
+                    <i class="icon-style rounded-circle fas fa-trophy fa-2x"></i>
+                    <h4 class="font-weight-bolder">Education</h4>
+                    <p>Name: Farhan Labib</p>
+                    <p>profession: software engineer</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus in quia pariatur laudantium et itaque suscipit, obcaecati nostrum unde perspiciatis?</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex saepe maxime tempora, neque officia quibusdam ipsa esse nisi laborum ad.
+                    
+                    <p>website :<a href="https://www.Farhanofficial.com" target="_blank">www.Farhanofficial.com</a></p>
+                    <p> <a href="https://www.dropbox.com/s/hcrb4xwuvwpicf7/PERSONAL%20INFORMATIONAnisul%20Islam.pdf?dl=0" target="_blank" download=""><button class="btn btn-primary">Download CV</button></a></p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="basic-desc">
+                    <i class="fas fa-briefcase fa-2x icon-style rounded-circle"></i>
+                    <h4 class="font-weight-bolder">skill</h4>
+                    <table>
+                        <tr>
+                            <td>HTML</td>
+                            <td>
+                                <span class="star">
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                
+                                </span>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>
+                                <span class="star">
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                
+                                </span>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>BOOTSTRAP</td>
+                            <td>
+                                <span class="star">
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="far fa-star"></i> 
+                                   
+                                </span>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>JAVA</td>
+                            <td>
+                                <span class="star">
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star"></i> 
+                                    <i class="fas fa-star-half"></i> 
+                                    <i class="far fa-star"></i> 
+                                  
+                                </span>
+                            </td>
+                            
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+  </section>
+
+
+
+  <section id="Tutorial">
+         <div class="section-title">
+                <h3 class="text-center">Tutorial </h3>
+                <hr class="hr-style" style="border-color:black ;">
+          </div>
+   <div class="row text-center mb-3">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                 <div class="card m-10 m-lg-0">
+                   <img class="card-img-top" src="/image/card.jpg">
+                     <div class="card-body text-center">
+                       <h3 class="font-weight-bold">HTML </h3>
+                        <a href="#" class="stretched-link"></a>
+                  </div>
+         </div>
+
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card m-10 m-lg-0">
+          <img class="card-img-top" src="/image/card.jpg">
+            <div class="card-body text-center">
+              <h3 class="font-weight-bold">HTML </h3>
+               <a href="#" class="stretched-link"></a>
+         </div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card m-10 m-lg-0">
+      <img class="card-img-top" src="/image/card.jpg">
+        <div class="card-body text-center">
+          <h3 class="font-weight-bold">HTML </h3>
+           <a href="#" class="stretched-link"></a>
+     </div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card m-10 m-lg-0">
+      <img class="card-img-top" src="/image/card.jpg">
+        <div class="card-body text-center">
+          <h3 class="font-weight-bold">HTML </h3>
+           <a href="#" class="stretched-link"></a>
+     </div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card m-10 m-lg-0">
+      <img class="card-img-top" src="/image/card.jpg">
+        <div class="card-body text-center">
+          <h3 class="font-weight-bold">HTML </h3>
+           <a href="#" class="stretched-link"></a>
+     </div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card m-10 m-lg-0">
+      <img class="card-img-top" src="/image/card.jpg">
+        <div class="card-body text-center">
+          <h3 class="font-weight-bold">HTML </h3>
+           <a href="#" class="stretched-link"></a>
+     </div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card m-10 m-lg-0">
+      <img class="card-img-top" src="/image/card.jpg">
+        <div class="card-body text-center">
+          <h3 class="font-weight-bold">HTML </h3>
+           <a href="#" class="stretched-link"></a>
+     </div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card m-10 m-lg-0">
+      <img class="card-img-top" src="/image/card.jpg">
+        <div class="card-body text-center">
+          <h3 class="font-weight-bold">HTML </h3>
+           <a href="#" class="stretched-link"></a>
+     </div>
+</div>
+
+</div>
+</div>
+   
+
+ 
+
+  </section>
+
+  <section id="feedback">
+    <div class="feedback-title bg-secondary text-white text-center p-5">
+      <h3>feedback</h3>
+      <hr class="hr-style">
+    </div>
+    <div class="row">
+        <div class="col-lg-12 bg-primary">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <p> 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, alias!</p>
+                  <img class="rounded-circle feedback-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0sdl9eAmFRht3Cv97FX_Kha_UPfPjBSIJww&usqp=CAU">
+                  <h6>farhan labib</h6>
+                </div>
+                <div class="carousel-item">
+                 <p> 2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi nobis nemo quae sunt neque ut ipsum facilis molestiae porro unde.</p>
+                 <img class="rounded-circle feedback-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0sdl9eAmFRht3Cv97FX_Kha_UPfPjBSIJww&usqp=CAU">
+                 <h6>farhan labib</h6>
+                </div>
+                <div class="carousel-item">
+                <p> 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quod vitae, soluta excepturi minima assumenda. Laboriosam harum rem quo, delectus facere corrupti mollitia inventore nesciunt tenetur corporis? Sunt, vero minus.</p>
+                <img class="rounded-circle feedback-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0sdl9eAmFRht3Cv97FX_Kha_UPfPjBSIJww&usqp=CAU">
+                <h6>farhan labib</h6>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+
+    </div>
+    </section>
+
+    <section id="contact">
+
+        <div class="section-title">
+            <h3 class="text-center">Conatct me</h3>
+            <hr class="hr-style">
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+       <form action="mailto farhan1994labib@gmail.com" method="post" enctype="text/plain" class="was-validate"></form>
+
+         <div class="form-group">
+            <label for="fULL NAME">full name</label>
+            <input type="full name" class="form-control" name="full name" required>
+            <div class="valid-feedback">valid</div>
+            <div class="invalid-feedback " style="color:white;">enter full name before submiting the form</div>        
+        </div>
+        <div class="form-group">
+            <label for="mail">Email</label>
+            <input type="email" class="form-control" name="email" required>
+              
+        </div>
+        <div class="form-group">
+            <label for="message">message</label>
+           <textarea spellcheck="resize:none;" name="" class="form-control" id="" rows="10" cols="4"></textarea>
+              
+        </div>
+        <div class="form-group">
+           <input type="submit" class="btn btn-primary" value="submit">
+           <input type="reset" class="btn btn-primary" value="reset">
+              
+        </div>
+      </div>
+    </section>
+ </main>
+ 
+ <footer>
+  <div class="row">
+<div class="col-lg-6">
+<p class="text-white mb-3 text-center text-lg-left">&copy; copywright :all right reserved farhan labib</p>
+</div>
+
+
+
+<div class="col-lg-6 text-center text-lg-right text-white ">
+<p >follow us on: </p>
+<a class="text-white  href="#"><i class="fab fa-facebook"></i></a>
+<a class="text-white  href="#"><i class="fab fa-instagram"></i></a>
+<a class="text-white  href="#"><i class="fab fa-youtube"></i></a>
+<a class="text-white  href="#"><i class="fab fa-twitter"></i></a>
+</div>
+
+
+  </div>
+ </footer>
+
+ </div>
+  
+
+      <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+</script>
+</body>
+</html>

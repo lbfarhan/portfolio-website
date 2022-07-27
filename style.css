@@ -1,0 +1,170 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+   
+    font-family: 'Montserrat', sans-serif;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-title h3{
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+.hr-style{
+    border: 5px dotted white;
+    border-bottom: none;
+    width: 50px;
+}
+
+/* header start  */
+header{
+    background-image: url("image/cover.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.navbar{
+    padding: 1% 10%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.navbar-icon{
+    color: white;
+}
+.navbar-brand img{
+    width: 60px;
+    height: auto;
+}
+.nav-link{
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    transition: .4s;
+}
+.nav-link:hover{
+   background: #2980b9;
+   color: white;
+   transform: scale(1.1);
+}
+
+.banner-container{
+    height: 100vh;
+}
+
+.banner-container h1{
+    font-size: 3.5rem;
+    background-color: rgba(7, 101,189, 0.8);
+    padding: 10px 20px;
+     font-family: 'Handlee', cursive;
+     border-radius: 5px;
+    
+}
+
+/* fetures section starts here */
+#fetures{
+    background-color: #e8d2de;
+    padding: 5% 15%;
+}
+.feture-col{
+    border: 1px solid #ff02c0;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.feture-col:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 5px 6px black;
+}
+
+.icon-style{
+    background-color: #ff02c0;
+    color: white;
+    padding: 15px;
+}
+/* fetures section ends here */
+/* about me section strats here */
+#About-Me{
+    padding: 4% 15%;
+    background-color:#e8d2de ;
+}
+#About-Me p{
+font-size: 0.9rem;
+margin-bottom: 0;
+font-weight: light;
+
+}
+
+#About-Me a{
+font-size: 0.9rem;
+font-weight: lighter;
+color: black;
+text-decoration: underline;
+}
+/* about me section ends here */
+
+/* tutorial starts here */
+#Tutorial{
+     padding: 4% 6%;
+    background-color:#ff02c0 ;
+     margin: 5px; 
+}
+.card{
+    transition: 0.4s;
+   border: 1px solid #ff02c0;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 4px 6px white;
+}
+/* tutorial ends here */
+/* feedbac start here */
+
+#feedback {
+    padding: 5%;
+}
+.carousel-item{
+    text-align: center;
+    padding: 7% 15%;
+    
+
+}
+.feedback-image{
+    width: 120px;
+    height: auto;
+    margin-bottom: 5px;
+}
+/* feedbac ends  here */
+
+/* contact starts here  */
+#contact{
+    padding: 2% 10%;
+    background-color: #88a2b3;
+}
+
+
+.form-group label{
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.form-group input{
+    align-items: center;
+}
+/* contact ends here  */
+/* footer starts here  */
+
+footer{
+    padding: 1% 10%;
+    background-color: #010c13;
+}
+/* footer ends here */
